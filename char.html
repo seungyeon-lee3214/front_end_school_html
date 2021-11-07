@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐릭터만들기</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background:rgb(43, 41, 172);
+            width: 100%;
+            height: 100%;
+        }
+        .waterDrop {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border: 10px solid black;
+            border-radius: 50px;
+            margin-left: 50%;
+            margin-right: 50%;
+            top: 130px;
+            background:skyblue;
+
+        }
+        .face {
+            background:skyblue;
+            top: 300px;    
+            position: fixed;
+            right: 30%;
+            width: 500px;
+            height: 500px;
+            border: 10px solid black;
+            border-radius: 30px 400px 400px 400px;
+            transform: rotate(45deg);
+        }
+        .eyebrowleft {
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            border-radius: 40px;
+            border: 10px solid black;
+            top: 280px;
+            left: -10px;
+            box-sizing: border-box;
+            background: black;
+        }
+        .eyebrowright {
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            border-radius: 40px;
+            border: 15px solid black;
+            top: 280px;
+            left: 160px;
+            box-sizing: border-box;
+            background: black;
+        }
+        .eyeleft {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 40px;
+            border: 5px solid black;
+            top: 50px;
+            left: 50px;
+            box-sizing: border-box;
+            background: black;
+        }
+        .eyeright {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 40px;
+            border: 5px solid black;
+            top: 45px;
+            left: 0px;
+            box-sizing: border-box;
+            background: black;
+        }
+        .blusherLeft {
+            position: absolute;
+            width: 50px;
+            height: 20px;
+            background: rgb(235, 95, 95);
+            border-radius: 15px / 10px;
+            top: 90px;
+        }
+        .blusherRight {
+            position: absolute;
+            width: 50px;
+            height: 20px;
+            background: rgb(235, 95, 95);
+            border-radius: 15px / 10px;
+            top: 85px;
+            left: 30px;
+        }
+ 
+        .mouse {
+            position: absolute;
+            width: 60px;
+            height: 40px;
+            top: 430px;
+            left: 85px;
+            border: 10px solid black;
+            background: rgb(235, 95, 95);
+            border-radius: 10px 10px 40px 40px;
+        }
+        .smaillDrop {
+            background:skyblue;
+            top: 360px;    
+            position: fixed;
+            right: 30%;
+            width: 60px;
+            height: 60px;
+            border: 10px solid black;
+            border-radius: 30px 400px 400px 400px;
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="face"></div>
+    <div class="waterDrop">
+        <div class="smaillDrop"></div>
+        <div class="eyebrowleft">
+            <div class="eyeleft"></div>
+            <div class="blusherLeft"></div>
+        </div>
+        <div class="eyebrowright">
+            <div class="eyeright"></div>
+            <div class="blusherRight"></div>
+        </div>
+        <div class="mouse"></div>
+    </div>
+    
+</body>
+</html>
