@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table tag</title>
+    <style>
+        table {
+            width: 40%;
+        }
+        table,
+        tr,
+        th,
+        td {
+            border: solid 1px black;
+            border-collapse: collapse;
+        }
+        .구분 {
+            width: 10%;
+        }
+        .책이름 {
+            width: 20%;
+        }
+        .책가격 {
+            width: 30%;
+        }
+        .책판매량 {
+            width: 20%;
+        }
+</style>
+</head>
+<body>
+    <!-- th 테이블 제목 문단 첫글 tr테이블 로우 줄  td테이블 한개낱개 -->
+    <table>
+        <caption>
+            이 table은 영국에서 최초로 시작되어 일년에 한바퀴 돌면서...
+        </caption>
+        <colgroup>
+            <col class="구분">
+            <col class="책이름">
+            <col class="책가격">
+            <col class="책판매량">
+        </colgroup>
+        <thead>
+        <tr>
+            <th>구분</th>
+            <th>책이름</th>
+            <th>책 가격</th>
+            <th>책 판매량</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>hello</td>
+            <td>1000</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>world</td>
+            <td>2000</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>country</td>
+            <td>1500</td>
+            <td>2</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <!-- colspan  옆으로 합치고 싶을때 -->
+            <td colspan="3">총판매량</td>
+            <td>7</td>
+        </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
