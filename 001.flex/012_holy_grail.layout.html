@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <title>holy grail layout</title>
+    <style>
+        /* reset */
+        * {
+            box-sizing: border-box;
+        }
+        /* utill */
+        .sr-only {
+            position: absolute;
+            left: -999px;
+            width: 1px;
+            height: 1px;
+            top: auto;
+            overflow: hidden;
+        }
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            border: 10px solid black;
+        }
+        .item {
+            border: 5px solid royalblue;
+        }
+        .item:nth-child(1) {
+            width: 100%;
+            border: 5px solid wheat;
+        }
+        .item:nth-child(2) {
+            width: 70%;
+            border: 5px solid sandybrown;
+        }
+        .item:nth-child(3) {
+            width: 30%;
+            border: 5px solid darkkhaki;
+        }
+        .item:nth-child(4) {
+            width: 100%;
+            border: 5px solid aquamarine;
+        }
+        @media  screen and (max-width: 800px) {
+            .item:nth-child(2) {
+                width: 100%;
+            }
+            .item:nth-child(3) {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="item">
+        <h1 class="sr-only">제목1</h1>
+        <nav>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+        </nav>
+    </header>
+    <section class="item">
+        <h2 class="sr-only">제목2</h2>
+        <article>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto fugit voluptate nemo aspernatur atque natus in, recusandae cum suscipit id asperiores laborum sint odit accusantium enim quas neque nihil delectus?
+        Animi, exercitationem ullam? Aliquam temporibus dicta ipsa, consequatur perspiciatis debitis illum quis nesciunt officia, amet rem sapiente veniam quo. Voluptatum quaerat at sit est consequatur impedit doloremque praesentium maiores officia.</article>
+    </section>
+    <aside class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque eligendi autem necessitatibus, tempora facere
+        qui dolores voluptatum officia natus saepe aut est optio ullam, ducimus possimus asperiores! Atque, iure?</aside>
+    <footer class="item">footer</footer>
+    </body>
+    
+    </html>
+<!-- 전체에 플렉스를 주고 wrap 주고 헤더 가로100프로 섹션 가로70 어사이드 가로30 푸터 가로100 -->
