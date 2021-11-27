@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <title>font-3</title>
+    <style>
+        /* 폰트 변환 사이트에서 다른 타입으로도 넣을 수 있음 */
+        /* 
+            format에는 truetype(인쇄 글꼴과 화면 글꼴 같음),
+            eot(embeddedopentype), 익스플로러 8이하,
+            woff(익스플로러 9이상) 등이 있음.
+
+         */
+        @font-face {
+            font-family: 'Gm';
+            src: url(./font_file/GmarketSansTTFMedium.ttf) format('truetype');
+        }
+        p {
+            font-family: 'Gm';
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis odio deleniti sint minima hic voluptatibus velit totam, ratione architecto dolorem fuga at, sit beatae blanditiis natus praesentium modi ducimus ut!</p>
+</body>
+</html>
