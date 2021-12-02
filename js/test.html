@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <title></title>
+</head>     
+<body>
+    <script>
+        // JS의 모든 선언은 호이스팅(선언이 먼저 메모리에 저장)이 일어납니다.
+            // 그러나 let, const, class 이용한 선언문은 호이스팅이 되었지만 안된 것처럼 동작
+            // 이러한 현상은 일시적 사각지대(Temporal Dead Zone)에 빠지기 때문
+            // 중요한 포인트는 그렇다하여 호이스팅이 안된 것은 아니라는 것!
+            // 오류가 나는 이유는 var 키워드는 선언과 함께 undefined로 초기화
+            // let과 const는 초기화 되지 않는 상태로 선언만 메모리 저장
+            console.log(add1(10, 20)); // 30
+            console.log(add2(10, 20)); // 30
+            console.log(mul1) // undefined
+            // console.log(mul1(10, 20)); // not a function
+            // console.log(mul2); // Cannot access 'mul2' before initialization
+            // console.log(mul2(10, 20)); // 위와 같은 애러
+            console.log(mul3) // mul3 is not defined, 호이스팅이 안되었기 때문
+
+            function add1(x, y) {
+                return x + y;
+            }
+
+            function add2(x, y) {
+                return x + y;
+            }
+
+
+            var mul1 = function (a, b) {
+                return a * b;
+            }
+
+            let mul2 = function (a, b) {
+                return a * b;
+            }
+
+
+            let data = [{
+                반: 1,
+                번: 1,
+                이름: "호준",
+                중간고사점수: 55
+            }, {
+                반: 1,
+                번: 2,
+                이름: "길동",
+                중간고사점수: 60
+            }, {
+                반: 1,
+                번: 3,
+                이름: "영희",
+                중간고사점수: 30
+            }, {
+                반: 1,
+                번: 4,
+                이름: "철수",
+                중간고사점수: 20
+            }, {
+                반: 1,
+                번: 5,
+                이름: "규리",
+                중간고사점수: 100
+            }]
+
+
+        let 회원정보 = [{
+                아이디: 'jjang',
+                패스워드: '5dbfbded05f34de754e8f265448be17934580556b488c0461fd12d211a87aaa5',
+                성별: '남',
+                휴대폰번호: '010-5004-0000',
+                이메일: 'hojun1@gmail.com',
+                가입연도: '2021-12-02',
+                주접속위치: '125.242.161.149'
+            }, {
+                아이디: 'jjang2',
+                패스워드: '5dbfbded05f34de754e8f265448be17934580556b488c0461fd12d211a87aaa5',
+                성별: '남',
+                휴대폰번호: '010-5004-0000',
+                이메일: 'hojun2@gmail.com',
+                가입연도: '2021-12-02',
+                주접속위치: '125.242.161.149'
+            }, {
+                아이디: 'jjqng3',
+                패스워드: '5dbfbded05f34de754e8f265448be17934580556b488c0461fd12d211a87aaa5',
+                성별: '여',
+                휴대폰번호: '010-5004-0000',
+                이메일: 'hojun3@gmail.com',
+                가입연도: '2021-12-02',
+                주접속위치: '125.242.161.149'
+            }, {
+                아이디: 'jjaeg4',
+                패스워드: '5dbfbded05f34de754e8f265448be17934580556b488c0461fd12d211a87aaa5',
+                성별: '여',
+                휴대폰번호: '010-5004-0000',
+                이메일: 'hojun4@gmail.com',
+                가입연도: '2020-12-02',
+                주접속위치: '125.242.161.149'
+            }];
+
+                // 1번 남자이면서 2021년도에 가입하신분
+                // 내가 푼 답 회원정보.filter(x => x.성별 === '남' && x.가입연도[3] == '1');
+
+                // 좋은 답 1 (el) => el.성별 === "남" && el.가입연도.split("-")[0] === "2021"
+                // 괜찮은 답2 console.log(회원정보.filter(el => el.성별 === "남" && el.가입연도.slice(0, 4) === "2021"));
+                // 회원정보.filter(el => el.가입연도.substr(0, 4) === "2021");
+                // 2qjs 아이디가 jjang인 사람을 찾아주세요 
+                회원정보.find(x => x.아이디 === 'jjang');
+                // 글이 100개
+                    // 25개는 일상
+                    // 50개는 개발관련 글
+                    // 25개는 취미
+                    let blogs = [{
+                        id: 1,
+                        title: 'title1',
+                        content: 'content1',
+                        section: '일상'
+                    }, {
+                        id: 2,
+                        title: 'title2',
+                        content: 'content2',
+                        section: '개발'
+                    }, {
+                        id: 3,
+                        title: 'title3',
+                        content: 'content3',
+                        section: '취미'
+                    }, {
+                            id: 3,
+                            title: 'title3',
+                            content: 'content3',
+                            section: '개발'
+                    
+                    }];
+
+                    let s = '개발'
+                    let data = s? blogs.filter(b => b.section === s) : blogs;
+    </script>
+</body>
+</html>
