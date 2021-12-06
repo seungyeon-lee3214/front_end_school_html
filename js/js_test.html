@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="one">hello world</h1>
+    <div class="one">hello world</div>
+    <div class="one two" id="three">hello world two</div>
+    <div class="one two four">hello world</div>
+    <h2 id="two">hello world</h2>
+    <button onClick="f()">눌러!</button>
+    <script src="https://code.jquery.com/qunit/qunit-2.17.2.js"
+        integrity="sha256-4bfbu70CwyusdxLS9Or4fSWPOaFbWI0KCR78HYprENs=" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('one').innerHTML = 'paullab';
+        document.write('hello world write');
+       // window.alert('hello world write');
+        console.log('hello world write');
+
+        let x, y, z;
+        x = 6; 
+        y = 2;
+        z = 5;
+        document.write(x + y);
+        document.write('<br>');
+        document.write(x - z);
+        document.write('<br>');
+        document.write(z * y);
+        document.write('<br>');
+        document.write(x / y);
+        document.write('<br>');
+        document.write(x + y + z);
+
+        document.write(x > y);
+        document.write('<br>');
+        document.write(x < z);
+        document.write('<br>');
+        document.write(z <= y);
+        document.write('<br>');
+        document.write(x == y);
+        document.write('<br>');
+        document.write(7 === y + z);
+        document.write('<br>');
+        document.write('<br>');
+        let date = new Date();
+        document.write(date);
+        document.write('<br>');
+        document.write(date.getMonth());
+        document.write('<br>');
+        document.write(date.getDay());
+        document.write('<br>');
+        document.write(date.getFullYear());
+        document.write('<br>');
+        document.write(date.getHours());
+        document.write('<br>');
+        
+        const arr = [10, 20, 30, 40, 50];
+        document.write(arr[0]);
+        document.write('<br>');
+        document.write(arr[1]);
+        document.write('<br>');
+        document.write(arr.slice(1,2));
+        document.write('<br>');
+        document.write(arr);
+        document.write('<br>');
+        document.write(arr.pop());
+        document.write('<br>');
+        document.write(arr);
+        document.write('<br>');
+        document.write(arr.push(100));
+        document.write('<br>');
+        document.write(arr);
+        document.write('<br>');
+        document.write(arr.join('!'));
+        document.write('<br>');
+        // document.write(arr.reverse());
+        document.write(arr.sort());
+        document.write('<br>');
+        document.write(arr);
+        document.write('<br>');
+        
+        let person = {
+            name: {
+                firstname:'seungyeon',
+                lastname:'lee',
+            },
+            age:10,
+            married: false,
+        };
+        
+        document.write(person['name']['firstname']);
+        document.write('<br>');
+        document.write(person.name.lastname);
+        document.write('<br>');
+        
+        let a = 10
+        if(a < 2) {
+            document.write('hello');
+        }else if(a < 13) {
+            document.write('elseif');
+        } 
+        else {
+            document.write('hi');
+        }
+        
+        document.write('<br>');
+        let b = 2;
+        switch(b){
+            case 1:
+                document.write('hi');
+                break;
+                case 2:
+                    document.write('h');
+                    break;
+                    case 3:
+                        document.write('2');
+                        break;
+                        default:
+                            document.write('s');
+                        }
+                        
+                        document.write('<br>');
+                        const arr2 = [10, 20, 30, 40, 50, 60];
+                        for(let i = 0; i < arr2.length; i++) {
+                            document.write(arr2[i])
+                            document.write('<br>');
+                        }
+                        j =0
+                        while(j < 10) {
+                            document.write(j);
+                            document.write('<br>');
+                            j++
+                        }
+                        
+                        let i =0;
+                        
+                        k = document.getElementsByClassName('one');
+                        document.write(k['0']['innerHTML']);
+                        document.write('<br>');
+                        document.write(k['2']['className']);
+               
+                        function f(){
+                            document.getElementById('one').innerHTML = '반갑습니다';
+                            document.getElementById('one').style.backgroundColor = 'gray';
+                        }
+                        $('#two').click(
+                            function f() {
+                                $('div').html('반가워');
+                            }
+                        );
+    </script>
+</body>
+</html>
