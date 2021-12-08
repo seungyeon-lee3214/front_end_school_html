@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <title>로그인 페이지</title>
+</head>
+<body>
+    <script>
+        const userdb = [
+                {
+                    "_id": "61b05e43fe046765533eb312",
+                    "id": "Brigitte",
+                    "pw": "cdaff936-d4d0-4e43-949e-7e7f31a32c74",
+                    "index": 0,
+                    "picture": "http://placehold.it/32x32",
+                    "age": 20,
+                    "eyeColor": "blue",
+                    "name": "Spears Keith",
+                    "gender": "male",
+                    "company": "HATOLOGY",
+                    "email": "spearskeith@hatology.com",
+                    "phone": "+1 (857) 555-2122",
+                    "address": "768 Clermont Avenue, Bodega, Connecticut, 7061",
+                    "grade": "새싹"
+                },
+                {
+                    "_id": "61b05e43f943b1f9daea3849",
+                    "id": "hojun",
+                    "pw": "1234",
+                    "index": 1,
+                    "picture": "http://placehold.it/32x32",
+                    "age": 32,
+                    "eyeColor": "brown",
+                    "name": "Annmarie Farmer",
+                    "gender": "female",
+                    "company": "CHORIZON",
+                    "email": "annmariefarmer@chorizon.com",
+                    "phone": "+1 (842) 530-2945",
+                    "address": "833 McDonald Avenue, Richmond, North Dakota, 6299",
+                    "grade": "관리자"
+                },
+                {
+                    "_id": "61b05e4317fd267a21c7f1e4",
+                    "id": "Henrietta",
+                    "pw": "e07b89ef-70b3-4cb3-9de4-d62a35327119",
+                    "index": 2,
+                    "picture": "http://placehold.it/32x32",
+                    "age": 34,
+                    "eyeColor": "green",
+                    "name": "Kristi Montoya",
+                    "gender": "female",
+                    "company": "EMTRAK",
+                    "email": "kristimontoya@emtrak.com",
+                    "phone": "+1 (998) 446-3332",
+                    "address": "193 Luquer Street, Catherine, Virginia, 8749",
+                    "grade": "새싹"
+                },
+                {
+                    "_id": "61b05e434ab9718645ffe85f",
+                    "id": "Young",
+                    "pw": "cb603d7b-a7c4-47f0-9ff6-2c7fbb14a6c6",
+                    "index": 3,
+                    "picture": "http://placehold.it/32x32",
+                    "age": 34,
+                    "eyeColor": "green",
+                    "name": "Lara Pratt",
+                    "gender": "female",
+                    "company": "DIGIQUE",
+                    "email": "larapratt@digique.com",
+                    "phone": "+1 (886) 586-2921",
+                    "address": "956 Brevoort Place, Whitestone, Oregon, 9098",
+                    "grade": "새싹"
+                },
+                {
+                    "_id": "61b05e43822ab8af2dab9992",
+                    "id": "Douglas",
+                    "pw": "05b3dc7c-740b-42f5-a83f-560dca9e1a6c",
+                    "index": 4,
+                    "picture": "http://placehold.it/32x32",
+                    "age": 40,
+                    "eyeColor": "green",
+                    "name": "Jewell Hahn",
+                    "gender": "female",
+                    "company": "ACCUPHARM",
+                    "email": "jewellhahn@accupharm.com",
+                    "phone": "+1 (835) 461-3947",
+                    "address": "366 Hooper Street, Trail, Iowa, 7081",
+                    "grade": "일반"
+                },
+                {
+                    "_id": "61b05e430f4f7045f9a9220c",
+                    "id": "Ollie",
+                    "pw": "c0926896-fa48-4226-896b-d7f4a09ac774",
+                    "index": 5,
+                    "picture": "http://placehold.it/32x32",
+                    "age": 28,
+                    "eyeColor": "green",
+                    "name": "Wolfe Castaneda",
+                    "gender": "male",
+                    "company": "COMCUBINE",
+                    "email": "wolfecastaneda@comcubine.com",
+                    "phone": "+1 (894) 572-2592",
+                    "address": "320 Freeman Street, Thynedale, South Dakota, 2651",
+                    "grade": "실버"
+                },
+                {
+                    "_id": "61b05e432e133a7fe19bb38b",
+                    "id": "Gay",
+                    "pw": "7aac342a-daeb-425e-8d78-62ea4c4bbf00",
+                    "index": 6,
+                    "picture": "http://placehold.it/32x32",
+                    "age": 32,
+                    "eyeColor": "green",
+                    "name": "Tania French",
+                    "gender": "female",
+                    "company": "ENERVATE",
+                    "email": "taniafrench@enervate.com",
+                    "phone": "+1 (803) 578-2050",
+                    "address": "498 Sackman Street, Ahwahnee, Wisconsin, 6087",
+                    "grade": "골드"
+                },
+                {
+                    "_id": "61b05e43f7ab261c40bd8389",
+                    "id": "Myrtle",
+                    "pw": "0bb732e1-703e-42e9-a45e-a4c2b3708fdb",
+                    "index": 7,
+                    "picture": "http://placehold.it/32x32",
+                    "age": 33,
+                    "eyeColor": "green",
+                    "name": "Rogers Jenkins",
+                    "gender": "male",
+                    "company": "ISOSWITCH",
+                    "email": "rogersjenkins@isoswitch.com",
+                    "phone": "+1 (891) 526-3716",
+                    "address": "521 Garland Court, Hampstead, Maine, 5252",
+                    "grade": "새싹"
+                },
+                {
+                    "_id": "61b05e43afbc2bb22cdac10e",
+                    "id": "Kimberly",
+                    "pw": "cb6a8b7b-9ae5-402d-95e9-25b7bbfc74d8",
+                    "index": 8,
+                    "picture": "http://placehold.it/32x32",
+                    "age": 37,
+                    "eyeColor": "green",
+                    "name": "Leta Mathews",
+                    "gender": "female",
+                    "company": "ANIVET",
+                    "email": "letamathews@anivet.com",
+                    "phone": "+1 (920) 479-3252",
+                    "address": "227 Bassett Avenue, Aberdeen, Rhode Island, 9616",
+                    "grade": "골드"
+                }
+            ]
+
+        class GetUserData {
+          login(아이디, 비밀번호, 성공, 실패) {
+            const data = userdb.find(user => user.id === 아이디 && user.pw === 비밀번호);
+            if (data) {
+              성공(아이디)
+            } else {
+              실패(new Error('로그인 실패!'))
+            }
+          }
+          getUserDataSet(이용자, 성공, 실패) {
+            // 로그인 하고 나서 불러오는거니까 아이디 비번이 맞는지 확인할 필요 없다
+            const data = userdb.find(user => user.id === 이용자);
+            if (data) {
+              성공({
+                id : data.id,
+                picture : data.picture,
+                name : data.name,
+                company : data.company,
+                email : data.email,
+                grade : data.grade
+              })
+            } else { // db가 끊겼거나 예상치 못한 에러를 항상 대비해야 한다 
+              실패(new Error('데이터 베이스 로드 실패!'))
+            }
+          }
+        }
+        const userData = new GetUserData();
+        const id = 'hojun';
+        const pw = '1234';
+        userData.login(
+          id, 
+          pw,
+          // 성공 콜백함수 
+          (userID) => {
+            userData.getUserDataSet(
+              userID,
+              (userBasicInfo) => {
+                //grade에 따른 콜백을 하나 더 넣어줄 수 있습니다
+                console.log(userBasicInfo);
+              },
+              (실패) => {
+                console.log(실패);
+              }
+              )
+            },
+            // 실패 콜백함수
+            (실패) => {
+              console.log(실패);
+            }
+          );
+    </script>
+</body>
+</html>
